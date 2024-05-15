@@ -1,0 +1,266 @@
+:root {
+  --white-ivory: #f5fbef;
+  --white-ivory-blur: #f5fbefda;
+  --bg-blue: #2815a8;
+  --bg-licorice: #220c10ff;
+  --bg-green: #2d4739ff;
+  --bg-rose: #c62e65ff;
+  --bg-purple: #610f7f;
+  --black: #000000;
+
+  --h1: 235px;
+  --h2: 30px;
+  --p: 16px;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* WebKit Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(91, 121, 255, 0.67);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Firefox Scrollbar */
+::-moz-scrollbar {
+  width: 6px;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: rgba(91, 121, 255, 0.67);
+}
+
+::-moz-scrollbar-track {
+  background-color: transparent;
+}
+
+body {
+  color: var(--white-ivory);
+  font-family: "Satoshi", sans-serif;
+  background-color: var(--bg-blue);
+  overflow-x: hidden;
+}
+
+.wrapper {
+  padding: 0rem 0.75rem;
+  border: solid red;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--h1);
+  font-family: "Outward", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--h2);
+  font-weight: 500;
+}
+
+/*
+  ######################################
+  NAVIGATION
+  STYLING
+  ######################################
+  */
+nav {
+  background-color: var(--white-ivory);
+  color: var(--black);
+  font-weight: 500;
+
+  a,
+  a::after {
+    color: var(--black);
+    transition: 400ms ease-in-out;
+  }
+
+  a:hover {
+    opacity: 70%;
+  }
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.hide__on-mobile {
+  display: none;
+}
+
+.nav__link ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav__link ul.main__nav {
+  width: 100%;
+}
+
+.cta__btn {
+  color: var(--white-ivory);
+  padding: 8px 14px;
+  background-color: var(--black);
+  border-radius: 4px;
+
+  a {
+    color: var(--white-ivory);
+  }
+
+  a:hover {
+    opacity: unset;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: var(--white-ivory-blur);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+
+  li {
+    width: 100%;
+    text-align: left;
+    padding-left: 1.2rem;
+  }
+
+  a {
+    padding: 16px 50px 16px 0;
+  }
+
+  .sidebar__nav {
+    width: 100%;
+  }
+
+  .sidebar__nav ul.main__nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .cta__btn {
+    border-radius: unset;
+  }
+}
+
+/*
+  ######################################
+  WHAT I DO
+  MARQUEE STYLING
+  ######################################
+  */
+
+.what_i_do {
+  margin: 0.5rem 0;
+
+  h2 {
+    font-weight: 300;
+    font-style: italic;
+  }
+}
+
+.scroll-container {
+  width: 100vw;
+  overflow: hidden;
+}
+
+.horizontal-scrolling-items,
+.horizontal-scrolling-items2 {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.horizontal-scrolling-items\_\_item {
+  font-size: clamp(2rem, 10vw, 4rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+  color: white;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(0px - 50%));
+  }
+}
+
+.horizontal-scrolling-items {
+  animation-name: infiniteScroll;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes infiniteScroll2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(0px - 50%));
+  }
+}
+
+.horizontal-scrolling-items2 {
+  animation-name: infiniteScroll2;
+  animation-duration: 15s;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/*
+  ######################################
+  HERO SECTION
+  STYLING
+  ######################################
+  */
+.hero__container {
+  margin-top: 20%;
+}
+
+.hero__desc {
+  text-align: justify;
+  margin-bottom: 30px;
+}
