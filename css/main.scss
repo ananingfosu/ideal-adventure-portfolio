@@ -82,6 +82,12 @@ h2 {
   font-weight: 500;
 }
 
+a,
+a::after,
+a::before {
+  color: var(--white-ivory);
+}
+
 /*
   ######################################
   NAVIGATION
@@ -262,5 +268,18 @@ nav {
 
 .hero__desc {
   text-align: justify;
-  margin-bottom: 30px;
+  padding-bottom: 32px;
+  border-bottom: 1px var(--white-ivory) solid;
+}
+
+/*
+  ######################################
+  FEATURED PROJECT SECTION
+  STYLING
+  ######################################
+  */
+.featured__project {
+  margin: 64px 0 0;
+  padding-bottom: 64px;
+  border-bottom: 1px var(--white-ivory) solid;
 }
