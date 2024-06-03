@@ -9,7 +9,8 @@
   --black: #000000;
 
   --h1: 235px;
-  --h2: 30px;
+  --h2: 28px;
+  --h3: 18px;
   --p: 16px;
 }
 
@@ -66,6 +67,10 @@ body {
   border: solid red;
 }
 
+.line_divider {
+  margin: 0 0.75rem;
+}
+
 img {
   width: 100%;
 }
@@ -97,7 +102,11 @@ a::before {
 nav {
   background-color: var(--white-ivory);
   color: var(--black);
+  width: 100%;
+  top: 0;
   font-weight: 500;
+  position: fixed;
+  z-index: 998;
 
   a,
   a::after {
@@ -194,7 +203,10 @@ nav {
   */
 
 .what_i_do {
+  position: absolute;
+  top: 50px;
   margin: 0.5rem 0;
+  border: 2px green solid;
 
   h2 {
     font-weight: 300;
@@ -263,13 +275,12 @@ nav {
   ######################################
   */
 .hero__container {
-  margin-top: 20%;
+  margin-top: 70%;
 }
 
 .hero__desc {
   text-align: justify;
   padding-bottom: 32px;
-  border-bottom: 1px var(--white-ivory) solid;
 }
 
 /*
@@ -281,5 +292,144 @@ nav {
 .featured__project {
   margin: 64px 0 0;
   padding-bottom: 64px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.project__title {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  span a {
+    text-decoration: underline;
+    opacity: 80%;
+    font-weight: 500;
+  }
+}
+
+.sandwich {
+  border-top: 1px var(--white-ivory) solid;
   border-bottom: 1px var(--white-ivory) solid;
 }
+
+.project__desc {
+  padding-top: 24px;
+
+  p {
+    text-align: justify;
+  }
+
+  ul {
+    padding-top: 24px;
+    display: flex;
+    gap: 32px;
+
+    a {
+      text-decoration: underline;
+      opacity: 80%;
+    }
+  }
+}
+
+/*
+  ######################################
+  OTHER PROJECTS SECTION
+  STYLING
+  ######################################
+  */
+
+section.other__projects {
+  padding-bottom: 50px;
+  padding-top: 80px;
+}
+
+.wrapper {
+  border: unset;
+}
+
+/*
+  ######################################
+  CONTACT SECTION
+  STYLING
+  ######################################
+  */
+
+.reach__out {
+  padding-top: 24px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+
+  .my__email h2.get {
+    font-weight: 600;
+    font-size: calc(var(--h2) + 10px);
+  }
+
+  .my__email h2.mail {
+    font-style: italic;
+  }
+}
+
+.reach__out-info p {
+  font-weight: 500;
+}
+
+.location__time {
+  text-align: right;
+
+  .location__text {
+    font-weight: 600;
+  }
+}
+
+/*
+  ######################################
+  FOOTER SECTION
+  STYLING
+  ######################################
+  */
+
+footer {
+  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  span {
+    text-decoration: underline;
+
+    a:hover {
+      opacity: 80%;
+    }
+  }
+}
+
+.social__links {
+  ul {
+    font-size: var(--h3);
+    font-weight: 500;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    a {
+      text-decoration: underline;
+    }
+
+    a:hover {
+      opacity: 80%;
+    }
+  }
+}
+
+/*
+  ######################################
+  
+  fix the border bottoms: make a span and put it before each section to improve that effect
+  ######################################
+  */
