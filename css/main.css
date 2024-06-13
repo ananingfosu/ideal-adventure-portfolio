@@ -19,14 +19,19 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  list-style-type: none;
   box-sizing: border-box;
+  list-style: none;
+  border: 2px solid red;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+/* #####################################
+  SCROLLBAR STYLING
+  ######################################
+  */
 /* WebKit Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -62,8 +67,7 @@ body {
 }
 
 .wrapper {
-  padding: 0rem 0.75rem;
-  border: solid red;
+  padding: 0rem 1rem;
 }
 
 .line_divider {
@@ -90,112 +94,56 @@ a,
 a::after,
 a::before {
   color: var(--white-ivory);
+  transition: all 500ms ease;
 }
 
-/*
-  ######################################
-  NAVIGATION
-  STYLING
+/* #####################################
+  HEADER STYLING
   ######################################
   */
-nav {
-  background-color: var(--white-ivory);
-  color: var(--black);
-  width: 100%;
-  top: 0;
-  font-weight: 500;
+header {
   position: fixed;
-  z-index: 998;
-}
-nav a,
-nav a::after {
-  color: var(--black);
-  transition: 400ms ease-in-out;
-}
-nav a:hover {
-  opacity: 70%;
-}
-
-.nav__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 0;
-}
-
-.hide__on-mobile {
-  display: none;
-}
-
-.nav__link ul {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.nav__link ul.main__nav {
-  width: 100%;
-}
-
-.cta__btn {
-  color: var(--white-ivory);
-  padding: 8px 14px;
-  background-color: var(--black);
-  border-radius: 4px;
-}
-.cta__btn a {
-  color: var(--white-ivory);
-}
-.cta__btn a:hover {
-  opacity: unset;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
   right: 0;
-  height: 100vh;
-  width: 250px;
-  z-index: 999;
-  background-color: var(--white-ivory-blur);
-  -webkit-backdrop-filter: blur(12px);
-          backdrop-filter: blur(12px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white-ivory);
+  font-size: var(--p);
+  font-weight: 500;
+  padding: 16px 1rem;
+}
+header a {
+  color: var(--black);
+  padding: 2px 8px;
+}
+header #menu-icon {
+  color: var(--black);
+  font-size: 24px;
+  z-index: 10001;
+  cursor: pointer;
   display: none;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-}
-.sidebar li {
-  width: 100%;
-  text-align: left;
-  padding-left: 1.2rem;
-}
-.sidebar a {
-  padding: 16px 50px 16px 0;
-}
-.sidebar .sidebar__nav {
-  width: 100%;
-}
-.sidebar .sidebar__nav ul.main__nav {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
-}
-.sidebar .cta__btn {
-  border-radius: unset;
 }
 
-/*
-  ######################################
-  WHAT I DO
-  MARQUEE STYLING
+.nav__menulist {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav__menulist a:hover {
+  opacity: 50%;
+}
+
+/* #####################################
+  WHAT I DO STYLING
   ######################################
   */
 .what_i_do {
   position: absolute;
   top: 50px;
-  margin: 0.5rem 0;
+  margin: 0.4rem 0;
   border: 2px green solid;
 }
 .what_i_do h2 {
@@ -211,7 +159,7 @@ nav a:hover {
 .horizontal-scrolling-items,
 .horizontal-scrolling-items2 {
   display: flex;
-  margin: 0.5rem;
+  margin: 0.5rem 0 0 0;
 }
 
 .horizontal-scrolling-items__item {
@@ -271,11 +219,11 @@ nav a:hover {
 }
 
 /*
-  ######################################
-  FEATURED PROJECT SECTION
-  STYLING
-  ######################################
-  */
+    ######################################
+    FEATURED PROJECT SECTION
+    STYLING
+    ######################################
+    */
 .featured__project {
   margin: 64px 0 0;
   padding-bottom: 64px;
@@ -318,11 +266,11 @@ nav a:hover {
 }
 
 /*
-  ######################################
-  OTHER PROJECTS SECTION
-  STYLING
-  ######################################
-  */
+    ######################################
+    OTHER PROJECTS SECTION
+    STYLING
+    ######################################
+    */
 section.other__projects {
   padding-bottom: 50px;
   padding-top: 80px;
@@ -333,11 +281,11 @@ section.other__projects {
 }
 
 /*
-  ######################################
-  CONTACT SECTION
-  STYLING
-  ######################################
-  */
+    ######################################
+    CONTACT SECTION
+    STYLING
+    ######################################
+    */
 .reach__out {
   padding-top: 24px;
   padding-bottom: 50px;
@@ -365,11 +313,11 @@ section.other__projects {
 }
 
 /*
-  ######################################
-  FOOTER SECTION
-  STYLING
-  ######################################
-  */
+    ######################################
+    FOOTER SECTION
+    STYLING
+    ######################################
+    */
 footer {
   text-align: right;
   display: grid;
@@ -398,9 +346,25 @@ footer span a:hover {
   opacity: 80%;
 }
 
-/*
-  ######################################
-
-  fix the border bottoms: make a span and put it before each section to improve that effect
-  ######################################
-  *//*# sourceMappingURL=main.css.map */
+@media (max-width: 990px) {
+  header #menu-icon {
+    display: block;
+  }
+  .nav__menulist {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 280px;
+    height: 40vh;
+    background-color: var(--white-ivory);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 10px;
+    transition: all 700ms ease-in-out;
+  }
+  .nav__menulist.open {
+    right: 0;
+    transition: all 500ms ease-in-out;
+  }
+}/*# sourceMappingURL=main.css.map */

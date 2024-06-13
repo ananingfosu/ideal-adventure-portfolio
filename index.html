@@ -3,14 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS LINK -->
     <link rel="stylesheet" href="css/main.css" />
+
+    <!-- SATOSHI FONT LINK -->
     <link
       href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap"
       rel="stylesheet"
     />
+
+    <!-- OUTWARD FONT LINK -->
     <link href="https://fonts.cdnfonts.com/css/outward" rel="stylesheet" />
 
+    <!-- BOXICON ICON LINKS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- FAVICON IMAGE -->
     <link rel="icon" type="image/x-icon" href="images/afk-favicon.png" />
+
+    <!-- REMIXICON ICON LINK -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- WEBPAGE TITLE -->
     <title>Ananing Fosu Kwame</title>
   </head>
 
@@ -18,78 +39,35 @@
       ############################################################################################
       AUTHOR, DESIGNER, DEVELOPER: ANANING FOSU KWAME
       THIS IS A REIMAGINED WEBFOLIO I HAVE PLANNED ON FOR
-      ABOUT A YEAR NOW, ON AND OFF. THIS IS THE 6 ITERATION
+      ABOUT A YEAR NOW, ON AND OFF. THIS IS THE 7TH ITERATION
       ############################################################################################
     -->
 
   <body>
     <!--
       ######################################
-      STICKY NAVIGATION BAR
+      STICKY HEADER BAR SECTION
       ######################################
     -->
-    <nav class="wrapper">
-      <div class="nav__container">
-        <div class="welcome__msg">
-          <p>👋 Akwaaba, Welcome</p>
-        </div>
-        <div class="nav__link">
-          <ul class="main__nav">
-            <li class="hide__on-mobile"><a href="#">Home</a></li>
-            <li class="hide__on-mobile"><a href="#">Projects</a></li>
-            <li class="hide__on-mobile"><a href="#">Linktree</a></li>
-            <li class="hide__on-mobile"><a href="#">Download my resume</a></li>
-            <li class="cta__btn hide__on-mobile"><a href="#">Contact</a></li>
-            <li class="cta__btn hide__on-desktop" onclick="showSidebar()">
-              <a href="#"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 -960 960 960"
-                  width="24px"
-                  fill="#f5fbef"
-                >
-                  <path
-                    d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="nav__container sidebar">
-        <div class="sidebar__nav">
-          <ul class="main__nav">
-            <li onclick="hideSidebar()">
-              <a href="#"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24px"
-                  viewBox="0 -960 960 960"
-                  width="24px"
-                  fill="#5f6368"
-                >
-                  <path
-                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Linktree</a></li>
-            <li><a href="#">Download my resume</a></li>
-            <li class="cta__btn"><a href="#">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <header>
+      <!-- STICKY NAV LINK-->
+      <a href="#" class="welcome-text">👋 Akwaaba, Welcome</a>
+
+      <ul class="nav__menulist">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Linktree</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Download my resume</a></li>
+      </ul>
+
+      <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
 
     <!--
       ######################################
-      MARQUEE LOOP FOR MY SERVICES
+      WHAT ARE MY SERVICES AND WHAT I DO
       ######################################
     -->
 
@@ -286,21 +264,15 @@
       </div>
     </footer>
 
-    <!--
-      ######################################
-      SCRIPT TO SHOW TIME AND LOCATION
-      ######################################
-    -->
+    <!-- CUSTOM JS FOR TIME AND LOCATION -->
     <script>
-      function showSidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.style.display = "flex";
-      }
+      let menu = document.querySelector("#menu-icon");
+      let nav__menulist = document.querySelector(".nav__menulist");
 
-      function hideSidebar() {
-        const sidebar = document.querySelector(".sidebar");
-        sidebar.style.display = "none";
-      }
+      menu.onclick = () => {
+        menu.classList.toggle("bx-x");
+        nav__menulist.classList.toggle("open");
+      };
 
       function updateTime() {
         // Get the current time in Ghana (Greenwich Mean Time, GMT)
