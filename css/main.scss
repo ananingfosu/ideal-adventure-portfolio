@@ -378,6 +378,20 @@ footer {
   }
 }
 
+@media (min-width: 670px) {
+  .hero_container_details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero__name,
+  .hero__desc {
+    margin: 0;
+    padding: 10px;
+  }
+}
+
 @media (max-width: 990px) {
   header #menu-icon {
     display: block;
@@ -410,10 +424,6 @@ footer {
 
   .hero__container {
     margin-top: 40%;
-  }
-
-  .hero__desc {
-    width: 80%;
   }
 }
 
