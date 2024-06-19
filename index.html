@@ -265,7 +265,7 @@
     <!-- CUSTOM JS -->
 
     <script>
-      // JS FOR MENU OPEN AND CLOSE FOR MOBILE AND TABLETS
+      //######################### JS FOR MENU OPEN AND CLOSE FOR MOBILE AND TABLETS
       let menu = document.querySelector("#menu-icon");
       let nav__menulist = document.querySelector(".nav__menulist");
 
@@ -274,7 +274,7 @@
         nav__menulist.classList.toggle("open");
       };
 
-      // JS FOR MATCHING HERO DESCRIPTION TO HERO TITLE
+      //######################################### JS FOR MATCHING HERO DESCRIPTION TO HERO TITLE
       function adjustDescriptionWidth() {
         const hero__name = document.querySelector(".hero__name");
         const hero__desc = document.querySelector(".hero__desc");
@@ -296,7 +296,7 @@
         updateTime();
       });
 
-      // DISPLAY IMAGE OVER HERO TITLE ON HOVER
+      //################################## DISPLAY IMAGE OVER HERO TITLE ON HOVER
       document.addEventListener("DOMContentLoaded", (event) => {
         const hoverText = document.querySelector(".hover-text");
         const hoverImage = document.getElementById("hoverImage");
@@ -322,7 +322,7 @@
       // Adjust width on window resize
       window.addEventListener("resize", adjustDescriptionWidth);
 
-      // TIME AND LOCATION JS
+      //######################################### TIME AND LOCATION JS
       function updateTime() {
         // Get the current time in Ghana (Greenwich Mean Time, GMT)
         const now = new Date();
