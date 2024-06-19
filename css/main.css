@@ -7,8 +7,8 @@
   --bg-rose: #c62e65ff;
   --bg-purple: #610f7f;
   --black: #000000;
-  --h1: 235px;
-  --h2: 28px;
+  --h1: 200px;
+  --h2: 22px;
   --h3: 18px;
   --p: 16px;
 }
@@ -346,6 +346,23 @@ footer span a:hover {
   opacity: 80%;
 }
 
+@media (min-width: 620px) {
+  .hero__container {
+    margin-top: 50%;
+  }
+}
+@media (min-width: 670px) {
+  .hero_container_details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero__name,
+  .hero__desc {
+    margin: 0;
+    padding: 10px;
+  }
+}
 @media (max-width: 990px) {
   header #menu-icon {
     display: block;
@@ -366,5 +383,21 @@ footer span a:hover {
   .nav__menulist.open {
     right: 0;
     transition: all 500ms ease-in-out;
+  }
+}
+@media (min-width: 900px) {
+  h1 {
+    font-size: 280px;
+  }
+  .hero__container {
+    margin-top: 40%;
+  }
+}
+@media (min-width: 1220px) {
+  h1 {
+    font-size: 380px;
+  }
+  .hero__container {
+    margin-top: 20%;
   }
 }/*# sourceMappingURL=main.css.map */

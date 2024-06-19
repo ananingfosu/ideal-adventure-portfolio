@@ -113,14 +113,26 @@
       ######################################
       HERO SECTION WITH NAME AND DESC
       ######################################
-    -->
 
-    <section class="hero__container wrapper">
       <div class="hero__name">
         <h1>Ananing Fosu Kwame</h1>
       </div>
       <div class="hero__desc">
         <p>
+          Aside a foundation in computer science from KNUST, I am a creative and
+          discerning designer and developer specializing in UI design and
+          graphic design, along with expertise in frontend web development. My
+          focus on frontend web development is fueled
+        </p>
+      </div>
+
+      #######################################
+    -->
+
+    <section class="hero__container wrapper">
+      <div class="hero_container_details">
+        <h1 class="hero__name">Ananing Fosu Kwame</h1>
+        <p class="hero__desc">
           Aside a foundation in computer science from KNUST, I am a creative and
           discerning designer and developer specializing in UI design and
           graphic design, along with expertise in frontend web development. My
@@ -273,6 +285,22 @@
         menu.classList.toggle("bx-x");
         nav__menulist.classList.toggle("open");
       };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const hero__name = document.querySelector(".hero__name");
+        const hero__desc = document.querySelector(".hero__desc");
+
+        // Calculate the width of the heading element
+        const headingWidth = hero__name.offsetWidth;
+
+        // Set the width of the description element to match the heading width
+        hero__desc.style.width = headingWidth + "px";
+      });
+      // Adjust width on page load
+      document.addEventListener("DOMContentLoaded", adjustDescriptionWidth);
+
+      // Adjust width on window resize
+      window.addEventListener("resize", adjustDescriptionWidth);
 
       function updateTime() {
         // Get the current time in Ghana (Greenwich Mean Time, GMT)
