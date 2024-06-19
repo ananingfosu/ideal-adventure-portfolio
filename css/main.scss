@@ -22,7 +22,6 @@
   text-decoration: none;
   box-sizing: border-box;
   list-style: none;
-  border: 2px solid red;
 }
 
 html {
@@ -151,7 +150,6 @@ header {
   position: absolute;
   top: 50px;
   margin: 0.4rem 0;
-  border: 2px green solid;
 
   h2 {
     font-weight: 300;
@@ -223,6 +221,15 @@ header {
   margin-top: 70%;
 }
 
+.image-container {
+  pointer-events: none;
+  display: none;
+
+  img {
+    display: none;
+  }
+}
+
 .hero__desc {
   text-align: justify;
   padding-bottom: 32px;
@@ -268,7 +275,7 @@ header {
   }
 
   ul {
-    padding-top: 24px;
+    padding-top: 30px;
     display: flex;
     gap: 32px;
 
@@ -286,9 +293,14 @@ header {
     ######################################
     */
 
-section.other__projects {
+section.other__projects-main {
   padding-bottom: 50px;
   padding-top: 80px;
+}
+
+.other__projects {
+  display: grid;
+  gap: 1rem;
 }
 
 .wrapper {
@@ -319,8 +331,12 @@ section.other__projects {
   }
 }
 
-.reach__out-info p {
-  font-weight: 500;
+.reach__out-info {
+  grid-column: 1 / -1;
+
+  p {
+    font-weight: 500;
+  }
 }
 
 .location__time {
@@ -376,6 +392,18 @@ footer {
   .hero__container {
     margin-top: 50%;
   }
+
+  .reach__out {
+    grid-template-columns: 1fr 1fr; /* Create two columns when screen width is 600px or more */
+  }
+
+  .reach__out-info {
+    grid-column: 1 / -1; /* Ensures the first box still spans the full width */
+  }
+
+  .reach__out-grid {
+    grid-column: span 1; /* Each half-width box takes up one column */
+  }
 }
 
 @media (min-width: 670px) {
@@ -425,6 +453,59 @@ footer {
   .hero__container {
     margin-top: 40%;
   }
+
+  .other__projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hover-text {
+    position: relative;
+    display: inline-block;
+    cursor: none;
+  }
+
+  .image-container {
+    position: absolute;
+    pointer-events: none;
+
+    img {
+      display: unset;
+    }
+  }
+
+  #hoverImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .featured__project {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  section.other__projects-main {
+    padding-top: 20px;
+  }
+
+  .other__projects-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .other__projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    img {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: 1220px) {
@@ -434,5 +515,14 @@ footer {
 
   .hero__container {
     margin-top: 20%;
+  }
+
+  .reach__out {
+    grid-template-columns: 50% 1fr 1fr; /* Create three columns when screen width is 1220px or more */
+    gap: 1rem;
+  }
+
+  .reach__out-info {
+    grid-column: unset; /* Ensures the first box still spans the full width */
   }
 }
