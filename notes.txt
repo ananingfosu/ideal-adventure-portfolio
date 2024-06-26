@@ -1,0 +1,11 @@
+// make footer socials italic and give them 80% opcaity
+
+// try and work on adding the hero name hover effect to the other projects section
+
+//fix the links 
+
+//get content for the site
+
+//get project graphics too
+
+//add resume
