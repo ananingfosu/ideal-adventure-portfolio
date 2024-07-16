@@ -1,4 +1,4 @@
-// make footer socials italic and give them 80% opcaity
+// make footer socials italic and give them 80% opcaity --- done
 
 // try and work on adding the hero name hover effect to the other projects section
 

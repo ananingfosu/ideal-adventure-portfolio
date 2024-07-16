@@ -2,10 +2,10 @@
   --white-ivory: #f5fbef;
   --white-ivory-blur: #f5fbefda;
   --bg-blue: #2815a8;
-  --bg-licorice: #220c10ff;
-  --bg-green: #2d4739ff;
-  --bg-rose: #c62e65ff;
-  --bg-purple: #610f7f;
+  --bg-licorice: #220c10;
+  --bg-green: #005025;
+  --bg-rose: #c62e65;
+  --bg-purple: #7d0000;
   --black: #000000;
   --h1: 200px;
   --h2: 22px;
@@ -245,9 +245,12 @@ header #menu-icon {
   align-items: center;
 }
 .project__title span a {
+  font-style: italic;
   text-decoration: underline;
-  opacity: 80%;
   font-weight: 500;
+}
+.project__title span a:hover {
+  opacity: 80%;
 }
 
 .sandwich {
@@ -267,7 +270,11 @@ header #menu-icon {
   gap: 32px;
 }
 .project__desc ul a {
+  font-style: italic;
   text-decoration: underline;
+  font-weight: 500;
+}
+.project__desc ul a:hover {
   opacity: 80%;
 }
 
@@ -285,6 +292,14 @@ section.other__projects-main {
 .other__projects {
   display: grid;
   gap: 1rem;
+}
+.other__projects span a {
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: 500;
+}
+.other__projects span a:hover {
+  opacity: 80%;
 }
 
 .wrapper {
@@ -338,10 +353,23 @@ footer {
   grid-template-columns: 1fr;
   gap: 24px;
 }
-footer span {
+footer a {
+  font-style: italic;
   text-decoration: underline;
+  font-weight: 500;
 }
-footer span a:hover {
+footer a a:hover {
+  opacity: 80%;
+}
+footer .copyrighted {
+  padding-bottom: 2rem;
+}
+footer .copyrighted span a {
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: 500;
+}
+footer .copyrighted span a:hover {
   opacity: 80%;
 }
 

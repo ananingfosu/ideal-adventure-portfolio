@@ -265,6 +265,17 @@
     <!-- CUSTOM JS -->
 
     <script>
+      //#########################  JS FOR CHANGING BACKGROUND COLOR ON REFRESH
+      function getRandomColor() {
+        var colors = ["#2815a8", "#005025", "#610f7f", "#2815a8", "#2815a8"]; // Add your custom colors here
+        var randomIndex = Math.floor(Math.random() * colors.length);
+        return colors[randomIndex];
+      }
+
+      window.onload = function () {
+        document.body.style.backgroundColor = getRandomColor();
+      };
+
       //######################### JS FOR MENU OPEN AND CLOSE FOR MOBILE AND TABLETS
       let menu = document.querySelector("#menu-icon");
       let nav__menulist = document.querySelector(".nav__menulist");
